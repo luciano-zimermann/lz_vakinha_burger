@@ -4,6 +4,8 @@ import 'package:vakinha_burger_mobile/app/core/ui/vakinha_ui.dart';
 import 'package:vakinha_burger_mobile/app/routes/auth_routers.dart';
 import 'package:vakinha_burger_mobile/app/routes/splah_routers.dart';
 
+import 'app/core/bindings/application_binding.dart';
+
 void main() {
   runApp(const VakinhaBurgerMainApp());
 }
@@ -16,6 +18,7 @@ class VakinhaBurgerMainApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Vakinha Burger',
       theme: VakinhaUI.theme,
+      initialBinding: ApplicationBinding(),
       getPages: [
         ...SplashRouters.routers,
         ...AuthRouters.routers,
